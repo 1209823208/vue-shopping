@@ -7,9 +7,9 @@
             <img style="width: 40%" src="../assets/images/1.png">
           </div>
           <ul class="nav-list">
-            <router-link :to="{'path':item.ref}" tag="li"
+            <router-link  tag="li"
                          v-for="item in navList"
-                         active-class="active">{{item.name}}
+                         active-class="active" :to="{'path':item.ref}">{{item.name}}
             </router-link>
           </ul>
         </div>

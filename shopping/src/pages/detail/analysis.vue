@@ -181,7 +181,7 @@
         this.isBuySuccess = true;
       },
       goOrder() {
-
+        this.$router.push({path: '/orderList'})
       }
     },
     mounted() {
