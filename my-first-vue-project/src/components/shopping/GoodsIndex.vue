@@ -6,6 +6,7 @@
       <router-view></router-view>
     </keep-alive>
     <NavFooter></NavFooter>
+    <!--接口或其他错误弹框-->
     <Error></Error>
   </div>
 </template>

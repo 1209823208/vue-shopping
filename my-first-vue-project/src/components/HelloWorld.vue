@@ -231,22 +231,6 @@
 
           })
       },
-      getDataByAxios() {
-        this.$http.get('http://localhost:3000/db', {
-          params: {
-            ID: 12345
-          },
-          headers: {}
-        })
-          .then(function (res) {
-            console.log('res', res);
-          })
-          .catch(function (err) {
-            console.log(err);
-            return Promise.reject(err);
-
-          })
-      },
       postFunByVueSource() {
         this.$http.post('pack.json', {
           ID: 12345   // 传递参数
@@ -259,24 +243,6 @@
           .then(res => {
 
           }, erroe => {
-
-          })
-      },
-      postFunByAxios() {
-        this.$http.post('pack.json', {
-          ID: 12345   // 传递参数
-        }, {
-          headers: {
-            // 头部请求
-            token: 'ssss'
-          }
-        })
-          .then(function (res) {
-            console.log('res', res);
-          })
-          .catch(function (err) {
-            console.log(err);
-            return Promise.reject(err);
 
           })
       },
@@ -312,6 +278,40 @@
           .then(res => {
 
           }, erroe => {
+
+          })
+      },
+      getDataByAxios() {
+        this.$http.get('http://localhost:3000/db', {
+          params: {
+            ID: 12345
+          },
+          headers: {}
+        })
+          .then(function (res) {
+            console.log('res', res);
+          })
+          .catch(function (err) {
+            console.log(err);
+            return Promise.reject(err);
+
+          })
+      },
+      postFunByAxios() {
+        this.$http.post('pack.json', {
+          ID: 12345   // 传递参数
+        }, {
+          headers: {
+            // 头部请求
+            token: 'ssss'
+          }
+        })
+          .then(function (res) {
+            console.log('res', res);
+          })
+          .catch(function (err) {
+            console.log(err);
+            return Promise.reject(err);
 
           })
       },

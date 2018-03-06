@@ -3,7 +3,7 @@
     <h1 v-text="msg"></h1>
     <h1 v-text="parentHeader"></h1>
     <input v-model="childTellParent"/>
-    <button v-on:click="childTellParentByInput">确定</button>
+    <button :click="childTellParentByInput">确定</button>
     <p>路由参数：{{params}}</p>
   </div>
 </template>

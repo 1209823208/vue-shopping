@@ -17,7 +17,7 @@ import './assets/css/login.css'
 import './assets/css/product.css'
 import 'font-awesome/css/font-awesome.min.css'
 
-Vue.filter("currency",currency);
+Vue.filter("currency", currency);
 Vue.prototype.$http = axios
 Vue.config.productionTip = false
 Vue.use(VueLazyload, {
@@ -26,7 +26,6 @@ Vue.use(VueLazyload, {
 })
 Vue.use(infiniteScroll)
 Vue.component('icon', Icon)
-
 
 let vm = new Vue({
   el: '#app',
