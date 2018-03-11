@@ -1,0 +1,24 @@
+.clearfix:after {
+  content: "";
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
+  display: block;
+  clear: both;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.no {
+  display: none;
+}
+
+.show {
+  display: block;
+}

@@ -8,6 +8,8 @@ import App from '../App'
 const home = r => require.ensure([], () => r(require('../page/home/home')), 'home')
 const city = r => require.ensure([], () => r(require('../page/city/city')), 'city')
 const msite = r => require.ensure([], () => r(require('../page/msite/msite')), 'msite')
+const food = r => require.ensure([], () => r(require('../page/food/food')), 'food')
+const shop = r => require.ensure([], () => r(require('../page/shop/shop')), 'shop')
 
 Vue.use(Router)
 
@@ -37,6 +39,16 @@ export default new Router({
         {
           path: '/msite',
           component: msite
+        },
+        //特色商铺
+        {
+          path: '/food',
+          component: food
+        },
+        //商品详情
+        {
+          path: '/shop',
+          component: shop
         },
       ]
     }

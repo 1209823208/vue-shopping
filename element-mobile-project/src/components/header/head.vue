@@ -10,6 +10,7 @@
       <div class="col-xs-6" style="text-align: center">
         <section class="title_head ellipsis" v-if="headTitle">
           <span class="title_text">{{headTitle}}</span>
+          <slot name="centerContent"></slot>
         </section>
       </div>
       <div class="col-xs-3">
@@ -50,7 +51,6 @@
     top: 0;
     width: 100%;
     color: #ffffff;
-    padding: 20px 10px;
     font-size: 16px;
   }
 

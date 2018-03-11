@@ -1,6 +1,6 @@
 <template>
   <div class="city_container">
-    <head-top signin-up='true'>
+    <head-top signin-up='true' style="padding: 20px 10px;">
       <router-link to="/home" slot="changecity" class="change_city">切换城市</router-link>
     </head-top>
     <section style="margin-bottom: 60px">

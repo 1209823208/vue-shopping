@@ -7,6 +7,7 @@ import store from './store/'
 import axios from 'axios'
 import env from '@/config/environment'
 import 'font-awesome/css/font-awesome.min.css'
+import './style/style.css'
 
 Vue.config.productionTip = false
 Vue.prototype.$http = axios

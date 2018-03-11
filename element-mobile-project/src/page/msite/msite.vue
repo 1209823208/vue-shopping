@@ -1,6 +1,6 @@
 <template>
   <div>
-    <head-top :head-title="msiteTitle" signin-up='msite'>
+    <head-top :head-title="msiteTitle" signin-up='msite' style="padding: 20px 10px;">
       <span slot='logo'>
         <i class="fa fa-search"></i>
       </span>
@@ -28,7 +28,7 @@
         <header class="shop_header">
           <span class="shop_header_title">附近商家</span>
         </header>
-        <shop-list></shop-list>
+        <shop-list v-if="hasGetData" :geohash="geohash"></shop-list>
       </div>
     </section>
 
@@ -51,7 +51,8 @@
         geohash: '', //位置的latitude + ',' +.longitude;
         foodTypes: [], //食品分类列表
         imgBaseUrl: 'https://fuss10.elemecdn.com', //图片域名地址
-        msiteTitle: '请选择地址...'
+        msiteTitle: '请选择地址...',
+        hasGetData: false
       }
     },
     methods: {
@@ -72,6 +73,7 @@
               _this.msiteAddress();
               //保存geohash 到vuex
               _this.SAVE_GEOHASH(_this.geohash);
+              _this.hasGetData = true;
             }
           })
           .catch(function (error) {
@@ -136,8 +138,8 @@
         this.SAVE_GEOHASH(this.geohash);
         //获取位置信息
         this.msiteAddress();
+        this.hasGetData = true;
       }
-
     },
     mounted() {
       this.getFoodTypes();

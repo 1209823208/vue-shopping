@@ -1,6 +1,6 @@
 <template>
   <div>
-    <head-top signin-up='home'>
+    <head-top signin-up='home' style="padding: 20px 10px;">
       <span slot='logo' class="head-logo" @click="reload">ele.me</span>
     </head-top>
     <section style="margin-bottom: 60px">
